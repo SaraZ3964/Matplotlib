@@ -64,15 +64,17 @@ plt.savefig("Images/Pyber.png", bbox_inches="tight")
 # Show plot
 plt.show()
 
+
+
 # % of Total Fares by City Type
 # Calculate Type Percents
 type_percent = city_ride.groupby(['type'])
-total_fares = city_ride['fare'].sum()
+total_fares = type_percent['fare'].sum()
 
 # Build Pie Chart
 labels = ["Rural","Suburban","Urban"]
 explode = (0, 0, 0.1)
-colors = ["yellow", "lightskyblue", "lightred"]
+colors = ["yellow", "lightskyblue", "red"]
 plt.pie(total_fares, explode=explode, labels=labels, colors=colors, autopct="%1.1f%%", shadow=True, startangle=150)
 plt.title("% of Total Fares by City Type")
 
@@ -82,15 +84,17 @@ plt.savefig("Images/Pyber2.png", bbox_inches="tight")
 # Show Figure
 plt.show()
 
+
+
 # % of Total Rides by City Type
 # Calculate Type Percents
 type_percent = city_ride.groupby(['type'])
-total_fares = city_ride['ride_if'].sum()
+total_fares = type_percent['ride_if'].sum()
 
 # Build Pie Chart
 labels = ["Rural","Suburban","Urban"]
 explode = (0, 0, 0.1)
-colors = ["yellow", "lightskyblue", "lightred"]
+colors = ["yellow", "lightskyblue", "red"]
 plt.pie(total_fares, explode=explode, labels=labels, colors=colors, autopct="%1.1f%%", shadow=True, startangle=150)
 plt.title("% of Total Fares by City Type")
 
@@ -100,15 +104,18 @@ plt.savefig("Images/Pyber3.png", bbox_inches="tight")
 # Show Figure
 plt.show()
 
+
+
+
 # % of Total Drivers by City Type
 # Calculate Type Percents
 type_percent = city_ride.groupby(['type'])
-total_fares = city_ride['driver count'].sum()
+total_fares = type_percent['driver count'].sum()
 
 # Build Pie Chart
 labels = ["Rural","Suburban","Urban"]
 explode = (0, 0, 0.1)
-colors = ["yellow", "lightskyblue", "lightred"]
+colors = ["yellow", "lightskyblue", "red"]
 plt.pie(total_fares, explode=explode, labels=labels, colors=colors, autopct="%1.1f%%", shadow=True, startangle=150)
 plt.title("% of Total Fares by City Type")
 
