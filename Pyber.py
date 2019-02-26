@@ -89,7 +89,7 @@ plt.show()
 # % of Total Rides by City Type
 # Calculate Type Percents
 type_percent = city_ride.groupby(['type'])
-total_fares = type_percent['ride_if'].sum()
+total_fares = type_percent['ride_id'].sum()
 
 # Build Pie Chart
 labels = ["Rural","Suburban","Urban"]
